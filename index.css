@@ -1,0 +1,100 @@
+html, body, ._wrap, ._layout, main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+main { position: relative; }
+
+.logo {
+  background-image: url('./img/reverse_logo.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.absolute-full {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* nav */
+.top-nav {
+  position: fixed;
+  top: 20px;
+  right: 26px;
+  display: flex;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.top-nav a {
+  text-decoration: none;
+}
+
+.top-nav__btn {
+  height: 18px;
+  margin: 0 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* main */
+section {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.page-intro {
+  display: flex;
+  justify-content: center;
+}
+
+.page-intro__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-intro video {
+  width: auto;
+  height: 100%;
+}
+
+.intro-logo {
+  position: absolute;
+  width: 74%;
+  max-width: 600px;
+  aspect-ratio: 384/153;
+  transition: margin 1.6s, opacity 2.3s;
+  margin-top: 100px;
+  opacity: 0;
+}
+
+.intro__btn {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  transition: all .4s;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+}
+
+/**/
+.display-blur {
+  /* background-color: #000000c0; */
+  background-color: #000000a0;
+}
+
+@media screen and (max-width: 450px) {
+  
+}
