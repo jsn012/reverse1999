@@ -8,12 +8,17 @@ introLogo.style.marginTop = 0;
 introLogo.addEventListener('click', () => {
   if (page === 0) {
     introPage.style.width = 0;
-    // introPage.style.left = '50%';
   
     introLogo.style.transform = 'none';
-    introLogo.style.top = '22px';
-    introLogo.style.left = '26px';
-    introLogo.style.width = '150px';
+    introLogo.style.top = '24px';
+    introLogo.style.left = '30px';
+    introLogo.style.width = '14%';
+    introLogo.style.maxWidth = '180px';
+
+    setTimeout(() => {
+      document.querySelector('.top-nav').style.opacity = 1;
+      document.querySelector('.main-menu').style.opacity = 1;
+    }, 1300);
 
     page = 1;
   } else {
@@ -22,6 +27,9 @@ introLogo.addEventListener('click', () => {
     introLogo.style = '';
     introLogo.style.opacity = 1;
     introLogo.style.marginTop = 0;
+
+    document.querySelector('.top-nav').style.opacity = 0;
+    document.querySelector('.main-menu').style.opacity = 0;
 
     page = 0;
   }

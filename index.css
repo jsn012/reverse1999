@@ -24,11 +24,11 @@ main { position: relative; }
 /* nav */
 .top-nav {
   position: fixed;
-  top: 20px;
+  top: 22px;
   right: 26px;
   display: flex;
   z-index: 46;
-  /* opacity: 0; */
+  opacity: 0;
   transition: opacity 1.5s;
 }
 
@@ -55,6 +55,9 @@ section {
   width: 100%;
   height: 100%;
   left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
   transition: all 1.5s;
 }
 
@@ -71,7 +74,7 @@ section {
 .intro-logo {
   position: fixed;
   width: 74%;
-  min-width: 50px;
+  min-width: 130px;
   max-width: 500px;
   aspect-ratio: 367/147;
   top: 50%;
@@ -93,8 +96,63 @@ section {
 /**/
 .reverse-detail {
   background-color: #000;
+  background-image: url('./img/reverse_part2_bg1.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
 }
 
-@media screen and (max-width: 450px) {
-  
+.main-menu {
+  width: 100%;
+  height: 100%;
+  padding: 58px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  transition: opacity 1.5s;
+  opacity: 0;
+}
+
+.main-menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background-color .5s;
+  border-radius: 25px;
+  margin: 0 3%;
+  word-break: keep-all;
+  text-align: center;
+  position: relative;
+}
+
+.main-menu__item span {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.main-menu__item:hover {
+  background-color: #33333360;
+}
+
+.bg-youtube:hover { background-color: #33232360; }
+.bg-gall:hover { background-color: #33354d60; }
+
+/**/
+@media screen and (max-width: 800px) {
+  .main-menu {
+    padding: 120px 16px 30px 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .main-menu__item {
+    border-radius: 16px;
+    margin: 0;
+  }
+
+  .main-menu__item span {
+    font-size: 18px;
+  }
 }
